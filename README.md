@@ -15,7 +15,10 @@ Todos os direitos reservados ao criador desse modelo, segue abaixo o link do aut
 https://dribbble.com/shots/20328817-Loyalty-App
 
 As imagens foram tiradas do site https://www.vecteezy.com/ e segue abaixo também o link dos autores:
+
 https://www.vecteezy.com/free-vector/octopus" Octopus Vectors by Vecteezy
+
+
 https://www.freepik.com/free-vector/hand-drawn-octopus-drawing-illustration_49611623.htm#query=octopus&position=4&from_view=search&track=sph
 
 Assim que atualizar o aplicativo eu também atualizarei as pastas e o readme!
