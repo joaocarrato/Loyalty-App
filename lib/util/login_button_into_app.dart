@@ -1,8 +1,11 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class LoginButtonApp extends StatelessWidget {
-  const LoginButtonApp({super.key});
+  VoidCallback sigIn;
+  LoginButtonApp({super.key, required this.sigIn});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +15,7 @@ class LoginButtonApp extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           GestureDetector(
-            onTap: () {},
+            onTap: sigIn,
             child: Container(
               width: 80,
               height: 40,

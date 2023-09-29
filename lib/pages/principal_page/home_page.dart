@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loyalty_app/pages/is_logged.dart';
 import 'package:loyalty_app/util/login_button.dart';
 import 'package:loyalty_app/util/singup.dart';
 import 'package:loyalty_app/util/wallpaper.dart';
@@ -13,7 +14,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   // METODO DE NAVEGAÇÃO
   void changePage() {
-    Navigator.pushNamed(context, '/LoginPage');
+    // Navigator.pushNamed(context, '/LoginPage');
+    Navigator.push(
+        context, MaterialPageRoute(builder: (_) => const IsLogged()));
   }
 
   @override

@@ -3,19 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class ContinueWith extends StatelessWidget {
-  String imagePath;
-  String textChoose;
-  ContinueWith({
-    super.key,
-    required this.imagePath,
-    required this.textChoose,
-  });
+class ContinueEmail extends StatelessWidget {
+  VoidCallback onTap;
+  ContinueEmail({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 20.0),
+    return GestureDetector(
+      onTap: onTap,
       child: Container(
         height: 60,
         width: MediaQuery.of(context).size.width * 0.9,
@@ -23,19 +18,19 @@ class ContinueWith extends StatelessWidget {
           border: Border.all(color: HexColor('#2C2F5E'), width: 2),
           borderRadius: BorderRadius.circular(12),
         ),
-        child: Row(
+        child: const Row(
           children: [
-            const SizedBox(width: 20),
-            Image.asset(
-              imagePath,
-              height: 28,
+            SizedBox(width: 20),
+            Icon(
+              Icons.email_outlined,
+              size: 28,
             ),
-            const SizedBox(
+            SizedBox(
               width: 20,
             ),
             Text(
-              textChoose,
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+              'Sign Up with Email',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
             ),
           ],
         ),

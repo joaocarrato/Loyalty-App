@@ -1,19 +1,39 @@
-// ignore_for_file: sized_box_for_whitespace
+// ignore_for_file: sized_box_for_whitespace, override_on_non_overriding_member
 
-import 'dart:ffi';
-import 'dart:io';
-
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:loyalty_app/pages/principal_page/signup_page.dart';
 import 'package:loyalty_app/util/field.dart';
 import 'package:loyalty_app/util/login_button_into_app.dart';
 import 'package:loyalty_app/util/logos.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   final TextEditingController _controllerEmail = TextEditingController();
+
   final TextEditingController _controllerPass = TextEditingController();
+
+  // login method
+  Future loginMethod() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: _controllerEmail.text.trim(),
+      password: _controllerPass.text.trim(),
+    );
+  }
+
+  @override
+  void dispose() {
+    _controllerEmail.dispose();
+    _controllerPass.dispose(); //
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +81,9 @@ class LoginPage extends StatelessWidget {
                 const SizedBox(height: 10),
 
                 // BOTÃO DE LOGAR
-                const LoginButtonApp(),
+                LoginButtonApp(
+                  sigIn: loginMethod,
+                ),
 
                 const SizedBox(height: 20),
 
@@ -122,7 +144,10 @@ class LoginPage extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/SignUpPage');
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => const SignUpPage()));
                       },
                       child: Text(
                         'Sign up',

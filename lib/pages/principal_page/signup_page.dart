@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:loyalty_app/pages/signup_email_page.dart';
+import 'package:loyalty_app/util/continue_email.dart';
 import 'package:loyalty_app/util/continue_with.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -12,8 +14,19 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+  // voltar pagina anterior
   void backHome() {
     Navigator.pop(context);
+  }
+
+  // se registrar com email
+  void signUpEmail() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => const SignUpEmailPage(),
+      ),
+    );
   }
 
   @override
@@ -88,31 +101,10 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
 
                 const SizedBox(height: 40),
+
                 // CONTINUE WITH EMAIL
-                Container(
-                  height: 60,
-                  width: MediaQuery.of(context).size.width * 0.9,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: HexColor('#2C2F5E'), width: 2),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: const Row(
-                    children: [
-                      SizedBox(width: 20),
-                      Icon(
-                        Icons.email_outlined,
-                        size: 28,
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        'Sign Up with Email',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
+                ContinueEmail(
+                  onTap: signUpEmail,
                 ),
 
                 Padding(

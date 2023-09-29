@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loyalty_app/pages/principal_page/signup_page.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
@@ -18,7 +19,8 @@ class SignUp extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, '/SignUpPage');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const SignUpPage()));
             },
             child: const Text(
               'Sign up',

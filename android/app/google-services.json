@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1035547798973",
+    "project_id": "loyalty-app-ab6b0",
+    "storage_bucket": "loyalty-app-ab6b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035547798973:android:3066c3ae87a0c7598836d4",
+        "android_client_info": {
+          "package_name": "com.example.loyalty_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr8qCg8kPdnGEWlPNfFNfFRc6Wp-riBPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
