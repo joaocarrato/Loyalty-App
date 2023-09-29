@@ -22,3 +22,7 @@ https://www.vecteezy.com/free-vector/octopus" Octopus Vectors by Vecteezy
 https://www.freepik.com/free-vector/hand-drawn-octopus-drawing-illustration_49611623.htm#query=octopus&position=4&from_view=search&track=sph
 
 Assim que atualizar o aplicativo eu também atualizarei as pastas e o readme!
+
+# Atualizações
+
+Função de logar e registrar com email já foi adicionada, junto com função de logout quando o usuário já está logado. 
